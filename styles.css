@@ -1,0 +1,143 @@
+/* Gaya untuk body dan html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; /* Pilihan font umum untuk fallback */
+}
+
+/* Gaya untuk menu bar */
+.menu-bar {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.menu-item {
+    color: black;
+    text-decoration: none;
+    font-family: 'Tw Cen MT Condensed Extra Bold', sans-serif;
+    font-size: 24px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Gaya untuk kontainer utama */
+.container {
+    background-image: url('background_kampus.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 80px; /* Beri jarak untuk menu bar */
+}
+
+/* Gaya untuk logo */
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+/* Gaya untuk nama kampus */
+.campus-name {
+    font-family: 'Tw Cen MT Condensed Extra Bold', sans-serif;
+    color: black;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+/* Gaya untuk tombol lanjut */
+.continue-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.continue-button:hover {
+    background-color: darkgray;
+}
+
+/* Gaya untuk pop-up informasi */
+.info-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: 'Tw Cen MT Condensed Extra Bold', sans-serif;
+    text-align: center;
+    animation: fadeInUp 0.5s, fadeOutDown 0.5s 2.5s;
+    z-index: 1000;
+}
+
+/* Animasi untuk pop-up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px) translateX(-50%);
+    }
+}
+
+/* Gaya untuk halaman introduction */
+.introduction-container {
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px; /* Beri jarak dari menu bar */
+}
+
+.introduction-container h2 {
+    font-family: 'Tw Cen MT Condensed Extra Bold', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.introduction-container p {
+    font-size: 18px;
+}
